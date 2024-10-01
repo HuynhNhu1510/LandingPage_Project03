@@ -10,7 +10,7 @@
     --font-family: 'Sora', sans-serif;
     --primary-color: #10375C;
     --second-color: #2E80CE;
-    --navbar-text: #C9D2DA;
+    --heading-text: #C9D2DA;
     --primary-text: #575F66;
 
 
@@ -40,7 +40,7 @@ a {
 .container {
     margin: 0 auto;
     width: 1170px;
-    max-width: (100% - 40px);
+    max-width: calc(100% - 40px);
 }
 
 .btn {
@@ -120,16 +120,17 @@ a {
 .header-top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .navbar__list {
     display: flex;
 }
 
-.action__login,
+.header-action__login,
 .navbar__link {
     padding: 8px 21px;
-    color: var(--navbar-text);
+    color: var(--heading-text);
     font-size: 1.6rem;
     font-weight: var(--fw-light);
     text-align: center;
@@ -162,7 +163,84 @@ a {
     top: -2px;
 }
 
-.action__signup {
+.header-action {
+    display: flex;
+    align-items: center;
+}
+
+.header-action__signup {
     --height: 44px;
     min-width: 104px;
+}
+
+/*=== HERO ===*/
+.hero {
+    display: flex;
+    margin-top: 76px;
+    align-items: center;
+}
+
+.hero__content {
+    width: 44%;
+    flex-shrink: 0;
+}
+
+.hero__media {
+    flex-grow: 1;
+    /* Chiem phan con lai */
+}
+
+.hero__heading {
+    color: #fff;
+    font-size: 7rem;
+    font-weight: var(--fw-semi-bold);
+    line-height: 1.14;
+    letter-spacing: -0.02em;
+}
+
+.hero__description {
+    margin-top: 22px;
+    color: var(--heading-text);
+    font-family: Sora;
+    font-size: 1.8rem;
+    font-weight: var(--fw-light);
+    line-height: 1.7;
+}
+
+.hero__row {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+}
+
+.hero__contact {
+    margin-left: 38px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: var(--fw-regular);
+    line-height: 1.7;
+}
+
+.hero__images {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.hero__img {
+    width: 330px;
+    height: 540px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.hero__img:last-child {
+    width: 210px;
+    height: 410px;
+}
+
+.hero__img:first-child {
+    position: relative;
+    margin-right: -6px;
 }
